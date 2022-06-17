@@ -6,9 +6,17 @@ using System.Threading.Tasks;
 
 namespace Generic
 {
-     class UC2_WithGeneric
+     public class PrintArray<P>
      {
-        public static void toPrint<P>(P[] inputArray)
+        private P[] inputArray;
+
+        public PrintArray(P[] inputArray)
+        {
+            this.inputArray = inputArray;
+        }
+
+
+        public void toPrint()
         {
             foreach(var element in inputArray)
             {
